@@ -1,0 +1,30 @@
+//
+//  NetworkFacade.swift
+//  MyBlogIOS
+//
+//  Created by Vyacheslav Okulov on 1/27/18.
+//  Copyright © 2018 Vyacheslav Okulov. All rights reserved.
+//
+
+import Foundation
+
+final class NetworkFacade {
+    static let shared = NetworkFacade()
+    
+    private init() {
+        
+    }
+    
+    func loadPosts(withCompletion completion: @escaping ([Post]?) -> Void) {
+        let postListResource = PostListApiResource()
+        let postsRequest = ApiRequest(resource: postListResource)
+        
+        postsRequest.perform(withCompletion: completion)
+    }
+}
+
+extension ApiResource {
+    var baseURL: String {
+        return ""
+    }
+}
