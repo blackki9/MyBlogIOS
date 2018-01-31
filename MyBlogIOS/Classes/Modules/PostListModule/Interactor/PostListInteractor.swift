@@ -12,10 +12,18 @@ protocol PostListOutput {
     func loadData()
 }
 
+protocol PostListDataSource {
+    //TODO - add methods to access post data (title and text for now)
+}
+
 class PostListInteractor: PostListOutput {
     func loadData() {
         NetworkFacade.shared.loadPosts { (posts) in
             
         }
     }
+}
+
+extension PostListInteractor : PostListDataSource {
+    
 }

@@ -9,7 +9,9 @@
 import Foundation
 
 final class NetworkFacade {
+    
     static let shared = NetworkFacade()
+    private var requests = [AnyObject]();
     
     private init() {
         
@@ -18,8 +20,12 @@ final class NetworkFacade {
     func loadPosts(withCompletion completion: @escaping ([Post]?) -> Void) {
         let postListResource = PostListApiResource()
         let postsRequest = ApiRequest(resource: postListResource)
+        requests.append(postsRequest)
         
-        postsRequest.perform(withCompletion: completion)
+        postsRequest.perform {[weak self] (posts) in
+            self?.requests.removeAll()
+            completion(posts)
+        }
     }
 }
 

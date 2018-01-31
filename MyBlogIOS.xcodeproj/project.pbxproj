@@ -15,6 +15,9 @@
 		503727AB2020F70D003343ED /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727AA2020F70D003343ED /* LoginInteractor.swift */; };
 		503727B02020F758003343ED /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727AF2020F758003343ED /* SignUpViewController.swift */; };
 		503727B22020F766003343ED /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727B12020F766003343ED /* SignUpInteractor.swift */; };
+		503727B8202242F3003343ED /* PostListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727B6202242F3003343ED /* PostListTableViewCell.swift */; };
+		503727B9202242F3003343ED /* PostListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503727B7202242F3003343ED /* PostListTableViewCell.xib */; };
+		503727BB20224527003343ED /* PostListTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727BA20224527003343ED /* PostListTableDataSource.swift */; };
 		503B695A201B9B58006E78ED /* Blog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6952201B9B58006E78ED /* Blog.storyboard */; };
 		503B695B201B9B58006E78ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6954201B9B58006E78ED /* LaunchScreen.storyboard */; };
 		503B695C201B9B58006E78ED /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6956201B9B58006E78ED /* Login.storyboard */; };
@@ -53,6 +56,9 @@
 		503727AA2020F70D003343ED /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		503727AF2020F758003343ED /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		503727B12020F766003343ED /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		503727B6202242F3003343ED /* PostListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewCell.swift; sourceTree = "<group>"; };
+		503727B7202242F3003343ED /* PostListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListTableViewCell.xib; sourceTree = "<group>"; };
+		503727BA20224527003343ED /* PostListTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableDataSource.swift; sourceTree = "<group>"; };
 		503B6953201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Blog.storyboard; sourceTree = "<group>"; };
 		503B6955201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		503B6957201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -117,6 +123,31 @@
 				503727B12020F766003343ED /* SignUpInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		503727B32022422C003343ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				503727B52022426C003343ED /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		503727B42022422C003343ED /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				503727BA20224527003343ED /* PostListTableDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		503727B52022426C003343ED /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				503727B6202242F3003343ED /* PostListTableViewCell.swift */,
+				503727B7202242F3003343ED /* PostListTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		503B6951201B9B58006E78ED /* Storyboards */ = {
@@ -214,6 +245,8 @@
 		503B6968201B9BC5006E78ED /* PostListModule */ = {
 			isa = PBXGroup;
 			children = (
+				503727B42022422C003343ED /* DataSource */,
+				503727B32022422C003343ED /* Views */,
 				503B6969201B9BC5006E78ED /* Controller */,
 				503B696A201B9BC5006E78ED /* Interactor */,
 			);
@@ -425,6 +458,7 @@
 				503B695B201B9B58006E78ED /* LaunchScreen.storyboard in Resources */,
 				503B695A201B9B58006E78ED /* Blog.storyboard in Resources */,
 				5085B46F1FF29CCD00BFBC51 /* Assets.xcassets in Resources */,
+				503727B9202242F3003343ED /* PostListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +483,7 @@
 				5085B4681FF29CCD00BFBC51 /* AppDelegate.swift in Sources */,
 				503B697D201BBD60006E78ED /* ApiWrapper.swift in Sources */,
 				503727A12020F634003343ED /* AddPostViewController.swift in Sources */,
+				503727BB20224527003343ED /* PostListTableDataSource.swift in Sources */,
 				503727B02020F758003343ED /* SignUpViewController.swift in Sources */,
 				503B6987201CC27B006E78ED /* NetworkFacade.swift in Sources */,
 				503B6979201BB179006E78ED /* NetworkRequest.swift in Sources */,
@@ -461,6 +496,7 @@
 				503727A32020F654003343ED /* AddPostInteractor.swift in Sources */,
 				503B6985201CBF02006E78ED /* PostListViewController.swift in Sources */,
 				503B6977201BAE48006E78ED /* ApiResource.swift in Sources */,
+				503727B8202242F3003343ED /* PostListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
