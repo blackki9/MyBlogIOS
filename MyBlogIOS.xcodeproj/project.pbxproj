@@ -18,6 +18,10 @@
 		503727B8202242F3003343ED /* PostListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727B6202242F3003343ED /* PostListTableViewCell.swift */; };
 		503727B9202242F3003343ED /* PostListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503727B7202242F3003343ED /* PostListTableViewCell.xib */; };
 		503727BB20224527003343ED /* PostListTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727BA20224527003343ED /* PostListTableDataSource.swift */; };
+		503727BF2024E377003343ED /* MyBlog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 503727BD2024E377003343ED /* MyBlog.xcdatamodeld */; };
+		503727CA2024E940003343ED /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727C92024E940003343ED /* CoreDataStack.swift */; };
+		503727CD2024EA36003343ED /* ManagedPost+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727CB2024EA36003343ED /* ManagedPost+CoreDataClass.swift */; };
+		503727CE2024EA36003343ED /* ManagedPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727CC2024EA36003343ED /* ManagedPost+CoreDataProperties.swift */; };
 		503B695A201B9B58006E78ED /* Blog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6952201B9B58006E78ED /* Blog.storyboard */; };
 		503B695B201B9B58006E78ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6954201B9B58006E78ED /* LaunchScreen.storyboard */; };
 		503B695C201B9B58006E78ED /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6956201B9B58006E78ED /* Login.storyboard */; };
@@ -59,6 +63,10 @@
 		503727B6202242F3003343ED /* PostListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewCell.swift; sourceTree = "<group>"; };
 		503727B7202242F3003343ED /* PostListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListTableViewCell.xib; sourceTree = "<group>"; };
 		503727BA20224527003343ED /* PostListTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableDataSource.swift; sourceTree = "<group>"; };
+		503727BE2024E377003343ED /* MyBlog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyBlog.xcdatamodel; sourceTree = "<group>"; };
+		503727C92024E940003343ED /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		503727CB2024EA36003343ED /* ManagedPost+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedPost+CoreDataClass.swift"; sourceTree = "<group>"; };
+		503727CC2024EA36003343ED /* ManagedPost+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedPost+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		503B6953201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Blog.storyboard; sourceTree = "<group>"; };
 		503B6955201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		503B6957201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -150,6 +158,25 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		503727BC2024E36C003343ED /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				503727CB2024EA36003343ED /* ManagedPost+CoreDataClass.swift */,
+				503727CC2024EA36003343ED /* ManagedPost+CoreDataProperties.swift */,
+				503727C82024E938003343ED /* CoreDataStack */,
+				503727BD2024E377003343ED /* MyBlog.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		503727C82024E938003343ED /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				503727C92024E940003343ED /* CoreDataStack.swift */,
+			);
+			path = CoreDataStack;
+			sourceTree = "<group>";
+		};
 		503B6951201B9B58006E78ED /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +200,7 @@
 		503B695F201B9BC5006E78ED /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				503727BC2024E36C003343ED /* Database */,
 				503B6981201CB9D3006E78ED /* ConcreteRequests */,
 				503B697E201CB656006E78ED /* Model */,
 				503B6972201BAC0B006E78ED /* NetworkLayer */,
@@ -477,18 +505,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				503727B22020F766003343ED /* SignUpInteractor.swift in Sources */,
+				503727CA2024E940003343ED /* CoreDataStack.swift in Sources */,
 				503727AB2020F70D003343ED /* LoginInteractor.swift in Sources */,
 				503B6983201CB9E2006E78ED /* PostListApiResource.swift in Sources */,
+				503727CE2024EA36003343ED /* ManagedPost+CoreDataProperties.swift in Sources */,
 				503B6975201BAC17006E78ED /* Serialization.swift in Sources */,
 				5085B4681FF29CCD00BFBC51 /* AppDelegate.swift in Sources */,
 				503B697D201BBD60006E78ED /* ApiWrapper.swift in Sources */,
 				503727A12020F634003343ED /* AddPostViewController.swift in Sources */,
 				503727BB20224527003343ED /* PostListTableDataSource.swift in Sources */,
+				503727CD2024EA36003343ED /* ManagedPost+CoreDataClass.swift in Sources */,
 				503727B02020F758003343ED /* SignUpViewController.swift in Sources */,
 				503B6987201CC27B006E78ED /* NetworkFacade.swift in Sources */,
 				503B6979201BB179006E78ED /* NetworkRequest.swift in Sources */,
 				503B697B201BB8DF006E78ED /* ApiRequest.swift in Sources */,
 				503B6980201CB65D006E78ED /* Post.swift in Sources */,
+				503727BF2024E377003343ED /* MyBlog.xcdatamodeld in Sources */,
 				503727A72020F6B4003343ED /* PostDetailsInteractor.swift in Sources */,
 				503727A52020F6A3003343ED /* PostDetailsViewController.swift in Sources */,
 				503B6989201CC781006E78ED /* PostListInteractor.swift in Sources */,
@@ -754,6 +786,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		503727BD2024E377003343ED /* MyBlog.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				503727BE2024E377003343ED /* MyBlog.xcdatamodel */,
+			);
+			currentVersion = 503727BE2024E377003343ED /* MyBlog.xcdatamodel */;
+			path = MyBlog.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5085B45C1FF29CCD00BFBC51 /* Project object */;
 }
