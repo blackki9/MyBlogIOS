@@ -22,6 +22,7 @@
 		503727CA2024E940003343ED /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727C92024E940003343ED /* CoreDataStack.swift */; };
 		503727CD2024EA36003343ED /* ManagedPost+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727CB2024EA36003343ED /* ManagedPost+CoreDataClass.swift */; };
 		503727CE2024EA36003343ED /* ManagedPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727CC2024EA36003343ED /* ManagedPost+CoreDataProperties.swift */; };
+		503727D0202A0CC9003343ED /* CoreDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727CF202A0CC9003343ED /* CoreDataWorker.swift */; };
 		503B695A201B9B58006E78ED /* Blog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6952201B9B58006E78ED /* Blog.storyboard */; };
 		503B695B201B9B58006E78ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6954201B9B58006E78ED /* LaunchScreen.storyboard */; };
 		503B695C201B9B58006E78ED /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6956201B9B58006E78ED /* Login.storyboard */; };
@@ -67,6 +68,7 @@
 		503727C92024E940003343ED /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		503727CB2024EA36003343ED /* ManagedPost+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedPost+CoreDataClass.swift"; sourceTree = "<group>"; };
 		503727CC2024EA36003343ED /* ManagedPost+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedPost+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		503727CF202A0CC9003343ED /* CoreDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWorker.swift; sourceTree = "<group>"; };
 		503B6953201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Blog.storyboard; sourceTree = "<group>"; };
 		503B6955201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		503B6957201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				503727C92024E940003343ED /* CoreDataStack.swift */,
+				503727CF202A0CC9003343ED /* CoreDataWorker.swift */,
 			);
 			path = CoreDataStack;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				503B6989201CC781006E78ED /* PostListInteractor.swift in Sources */,
 				503727A92020F6FD003343ED /* LoginViewController.swift in Sources */,
 				503727A32020F654003343ED /* AddPostInteractor.swift in Sources */,
+				503727D0202A0CC9003343ED /* CoreDataWorker.swift in Sources */,
 				503B6985201CBF02006E78ED /* PostListViewController.swift in Sources */,
 				503B6977201BAE48006E78ED /* ApiResource.swift in Sources */,
 				503727B8202242F3003343ED /* PostListTableViewCell.swift in Sources */,

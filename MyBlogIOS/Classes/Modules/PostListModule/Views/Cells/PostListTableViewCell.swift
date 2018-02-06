@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol ConfigurableCellWithModel {
+    associatedtype CellModel
+    
+    func configure(with model: CellModel?)
+}
+
 class PostListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var postTitleLabel: UILabel!
@@ -31,5 +37,13 @@ class PostListTableViewCell: UITableViewCell {
     
     func setPostText(text: String?) {
         postTextView.text = text
+    }
+}
+
+extension PostListTableViewCell : ConfigurableCellWithModel {
+    
+    func configure(with model: Post?) {
+        postTitleLabel.text = model?.title
+        postTextView.text = model?.textToPresent
     }
 }

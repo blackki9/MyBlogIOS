@@ -16,7 +16,6 @@ class PostDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         configureOutputAndInput()
-        // Do any additional setup after loading the view.
     }
 }
 
@@ -24,4 +23,5 @@ extension PostDetailsViewController {
     func configureOutputAndInput() {
         output = PostDetailsInteractor()
     }
+ 
 }

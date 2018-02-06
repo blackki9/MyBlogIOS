@@ -8,9 +8,21 @@
 
 import Foundation
 
+fileprivate let maxTextLengthForPresentation = 200
+
 struct Post {
     let title: String?
     let text: String?
+    
+    var textToPresent: String? {
+//        guard let text = text else {
+//            return nil
+//        }
+//        let textLength = text.count
+//        let indexOfPresentationEnd = (textLength > maxTextLengthForPresentation) ? maxTextLengthForPresentation : textLength
+        
+        return text
+    }
 }
 
 extension Post {
