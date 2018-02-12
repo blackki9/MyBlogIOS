@@ -23,6 +23,14 @@
 		503727CD2024EA36003343ED /* ManagedPost+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727CB2024EA36003343ED /* ManagedPost+CoreDataClass.swift */; };
 		503727CE2024EA36003343ED /* ManagedPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727CC2024EA36003343ED /* ManagedPost+CoreDataProperties.swift */; };
 		503727D0202A0CC9003343ED /* CoreDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727CF202A0CC9003343ED /* CoreDataWorker.swift */; };
+		503727D3202B8B9B003343ED /* PostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727D2202B8B9B003343ED /* PostListRouter.swift */; };
+		503727D8202CD19F003343ED /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727D7202CD19F003343ED /* TableViewDataSource.swift */; };
+		503727EB20321D94003343ED /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727EA20321D94003343ED /* LoginRouter.swift */; };
+		503727F020322345003343ED /* AddPostApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727ED20322345003343ED /* AddPostApiResource.swift */; };
+		503727F120322345003343ED /* DeletePostApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727EE20322345003343ED /* DeletePostApiResource.swift */; };
+		503727F220322345003343ED /* PostListApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727EF20322345003343ED /* PostListApiResource.swift */; };
+		503727F52032235B003343ED /* LoginApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727F42032235B003343ED /* LoginApiResource.swift */; };
+		503727F7203223B3003343ED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503727F6203223B3003343ED /* User.swift */; };
 		503B695A201B9B58006E78ED /* Blog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6952201B9B58006E78ED /* Blog.storyboard */; };
 		503B695B201B9B58006E78ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6954201B9B58006E78ED /* LaunchScreen.storyboard */; };
 		503B695C201B9B58006E78ED /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B6956201B9B58006E78ED /* Login.storyboard */; };
@@ -33,7 +41,6 @@
 		503B697B201BB8DF006E78ED /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B697A201BB8DF006E78ED /* ApiRequest.swift */; };
 		503B697D201BBD60006E78ED /* ApiWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B697C201BBD60006E78ED /* ApiWrapper.swift */; };
 		503B6980201CB65D006E78ED /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B697F201CB65D006E78ED /* Post.swift */; };
-		503B6983201CB9E2006E78ED /* PostListApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B6982201CB9E2006E78ED /* PostListApiResource.swift */; };
 		503B6985201CBF02006E78ED /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B6984201CBF02006E78ED /* PostListViewController.swift */; };
 		503B6987201CC27B006E78ED /* NetworkFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B6986201CC27B006E78ED /* NetworkFacade.swift */; };
 		503B6989201CC781006E78ED /* PostListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B6988201CC781006E78ED /* PostListInteractor.swift */; };
@@ -69,6 +76,14 @@
 		503727CB2024EA36003343ED /* ManagedPost+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedPost+CoreDataClass.swift"; sourceTree = "<group>"; };
 		503727CC2024EA36003343ED /* ManagedPost+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedPost+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		503727CF202A0CC9003343ED /* CoreDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWorker.swift; sourceTree = "<group>"; };
+		503727D2202B8B9B003343ED /* PostListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRouter.swift; sourceTree = "<group>"; };
+		503727D7202CD19F003343ED /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		503727EA20321D94003343ED /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		503727ED20322345003343ED /* AddPostApiResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostApiResource.swift; sourceTree = "<group>"; };
+		503727EE20322345003343ED /* DeletePostApiResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeletePostApiResource.swift; sourceTree = "<group>"; };
+		503727EF20322345003343ED /* PostListApiResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostListApiResource.swift; sourceTree = "<group>"; };
+		503727F42032235B003343ED /* LoginApiResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiResource.swift; sourceTree = "<group>"; };
+		503727F6203223B3003343ED /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		503B6953201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Blog.storyboard; sourceTree = "<group>"; };
 		503B6955201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		503B6957201B9B58006E78ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -79,7 +94,6 @@
 		503B697A201BB8DF006E78ED /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		503B697C201BBD60006E78ED /* ApiWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiWrapper.swift; sourceTree = "<group>"; };
 		503B697F201CB65D006E78ED /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		503B6982201CB9E2006E78ED /* PostListApiResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListApiResource.swift; sourceTree = "<group>"; };
 		503B6984201CBF02006E78ED /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		503B6986201CC27B006E78ED /* NetworkFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFacade.swift; sourceTree = "<group>"; };
 		503B6988201CC781006E78ED /* PostListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListInteractor.swift; sourceTree = "<group>"; };
@@ -180,6 +194,40 @@
 			path = CoreDataStack;
 			sourceTree = "<group>";
 		};
+		503727D1202B8B92003343ED /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				503727D2202B8B9B003343ED /* PostListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		503727E920321C55003343ED /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				503727EA20321D94003343ED /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		503727EC20322345003343ED /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				503727ED20322345003343ED /* AddPostApiResource.swift */,
+				503727EE20322345003343ED /* DeletePostApiResource.swift */,
+				503727EF20322345003343ED /* PostListApiResource.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		503727F320322351003343ED /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				503727F42032235B003343ED /* LoginApiResource.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		503B6951201B9B58006E78ED /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +255,7 @@
 				503B6981201CB9D3006E78ED /* ConcreteRequests */,
 				503B697E201CB656006E78ED /* Model */,
 				503B6972201BAC0B006E78ED /* NetworkLayer */,
+				503727D7202CD19F003343ED /* TableViewDataSource.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -251,6 +300,7 @@
 		503B6965201B9BC5006E78ED /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
+				503727E920321C55003343ED /* Router */,
 				503B6966201B9BC5006E78ED /* Controller */,
 				503B6967201B9BC5006E78ED /* Interactor */,
 			);
@@ -276,6 +326,7 @@
 		503B6968201B9BC5006E78ED /* PostListModule */ = {
 			isa = PBXGroup;
 			children = (
+				503727D1202B8B92003343ED /* Router */,
 				503727B42022422C003343ED /* DataSource */,
 				503727B32022422C003343ED /* Views */,
 				503B6969201B9BC5006E78ED /* Controller */,
@@ -349,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				503B697F201CB65D006E78ED /* Post.swift */,
+				503727F6203223B3003343ED /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,7 +408,8 @@
 		503B6981201CB9D3006E78ED /* ConcreteRequests */ = {
 			isa = PBXGroup;
 			children = (
-				503B6982201CB9E2006E78ED /* PostListApiResource.swift */,
+				503727F320322351003343ED /* Auth */,
+				503727EC20322345003343ED /* Posts */,
 				503B6986201CC27B006E78ED /* NetworkFacade.swift */,
 			);
 			path = ConcreteRequests;
@@ -508,17 +561,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				503727B22020F766003343ED /* SignUpInteractor.swift in Sources */,
+				503727F120322345003343ED /* DeletePostApiResource.swift in Sources */,
 				503727CA2024E940003343ED /* CoreDataStack.swift in Sources */,
 				503727AB2020F70D003343ED /* LoginInteractor.swift in Sources */,
-				503B6983201CB9E2006E78ED /* PostListApiResource.swift in Sources */,
 				503727CE2024EA36003343ED /* ManagedPost+CoreDataProperties.swift in Sources */,
 				503B6975201BAC17006E78ED /* Serialization.swift in Sources */,
 				5085B4681FF29CCD00BFBC51 /* AppDelegate.swift in Sources */,
+				503727F220322345003343ED /* PostListApiResource.swift in Sources */,
+				503727D3202B8B9B003343ED /* PostListRouter.swift in Sources */,
 				503B697D201BBD60006E78ED /* ApiWrapper.swift in Sources */,
 				503727A12020F634003343ED /* AddPostViewController.swift in Sources */,
+				503727F020322345003343ED /* AddPostApiResource.swift in Sources */,
 				503727BB20224527003343ED /* PostListTableDataSource.swift in Sources */,
 				503727CD2024EA36003343ED /* ManagedPost+CoreDataClass.swift in Sources */,
 				503727B02020F758003343ED /* SignUpViewController.swift in Sources */,
+				503727F52032235B003343ED /* LoginApiResource.swift in Sources */,
 				503B6987201CC27B006E78ED /* NetworkFacade.swift in Sources */,
 				503B6979201BB179006E78ED /* NetworkRequest.swift in Sources */,
 				503B697B201BB8DF006E78ED /* ApiRequest.swift in Sources */,
@@ -528,11 +585,14 @@
 				503727A52020F6A3003343ED /* PostDetailsViewController.swift in Sources */,
 				503B6989201CC781006E78ED /* PostListInteractor.swift in Sources */,
 				503727A92020F6FD003343ED /* LoginViewController.swift in Sources */,
+				503727EB20321D94003343ED /* LoginRouter.swift in Sources */,
 				503727A32020F654003343ED /* AddPostInteractor.swift in Sources */,
 				503727D0202A0CC9003343ED /* CoreDataWorker.swift in Sources */,
 				503B6985201CBF02006E78ED /* PostListViewController.swift in Sources */,
 				503B6977201BAE48006E78ED /* ApiResource.swift in Sources */,
+				503727D8202CD19F003343ED /* TableViewDataSource.swift in Sources */,
 				503727B8202242F3003343ED /* PostListTableViewCell.swift in Sources */,
+				503727F7203223B3003343ED /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

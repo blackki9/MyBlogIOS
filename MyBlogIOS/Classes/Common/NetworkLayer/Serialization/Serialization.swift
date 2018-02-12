@@ -28,6 +28,8 @@ extension String: SerializationValue {}
 
 extension Int: SerializationValue {}
 
+extension Double: SerializationValue {}
+
 extension Dictionary: SerializationValue {}
 
 extension Array: SerializationValue {}

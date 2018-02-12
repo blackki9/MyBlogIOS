@@ -22,7 +22,19 @@ extension ApiRequest: NetworkRequest {
     }
     
     func perform(withCompletion completion: @escaping (Model?) -> Void) {
-        perform(resource.url, withCompletion: completion)
+        perform(resource.request) { [weak self] (data) in
+            guard let data = data else {
+                return completion(nil)
+            }
+            
+            completion(self?.decode(data))
+        }
     }
 
+    func performBodyRequest(withCompletion completion: @escaping () -> Void) {
+        perform(resource.request) { (data) in
+//            let result = String(data: data!, encoding: .utf8)
+            completion()
+        }
+    }
 }

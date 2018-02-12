@@ -8,10 +8,18 @@
 
 import Foundation
 
-protocol SignUpOutput {
-    
+protocol SignUpControllerOutput {
+    func signUp(with userName: String?, password: String?)
 }
 
-class SignUpInteractor : SignUpOutput {
-    
+protocol SignUpControllerInput {
+    func showErrorMessage(errorMessage: String?)
+    func signUpSucceeded()
+}
+
+
+class SignUpInteractor : SignUpControllerOutput {
+    func signUp(with userName: String?, password: String?) {
+        
+    }
 }

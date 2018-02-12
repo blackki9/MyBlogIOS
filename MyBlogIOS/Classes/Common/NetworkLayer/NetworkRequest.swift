@@ -15,17 +15,17 @@ protocol NetworkRequest: class {
 }
 
 extension NetworkRequest {
-    func perform(_ url: URL,withCompletion completion: @escaping (Model?) -> Void) {
+    func perform(_ request: URLRequest,withCompletion completion: @escaping (Data?) -> Void) {
         let configuration = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
         
-        let task = session.dataTask(with: url) { [weak self] (data, response, error) in
+        let task = session.dataTask(with: request) { [weak self] (data, response, error) in
             guard let data = data else {
                 completion(nil)
                 return
             }
             
-            completion(self?.decode(data))
+            completion(data)
         }
         
         task.resume()

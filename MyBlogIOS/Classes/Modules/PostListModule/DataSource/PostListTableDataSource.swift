@@ -12,12 +12,17 @@ class PostListTableDataSource : NSObject {
     
     fileprivate let tableView: UITableView?
     fileprivate let dataSource: PostListDataSource?
+    var didCellSelected: ((_ indexPath: IndexPath) -> Void)?
     
     init(tableView: UITableView?, dataSource: PostListDataSource?) {
         self.tableView = tableView
         self.dataSource = dataSource
         super.init()
         configureTableView()
+    }
+    
+    func reloadData() {
+        tableView?.reloadData()
     }
     
     private func configureTableView() {
@@ -54,5 +59,11 @@ extension PostListTableDataSource: UITableViewDataSource {
 }
 
 extension PostListTableDataSource : UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectCompletion = didCellSelected else {
+            return
+        }
+        
+        selectCompletion(indexPath)
+    }
 }

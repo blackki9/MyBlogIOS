@@ -27,10 +27,33 @@ final class NetworkFacade {
             completion(posts)
         }
     }
+    
+    func addPost(post: Post?, withCompletion completion: @escaping () -> Void) {
+        let addPostResource = AddPostApiResource(postToSend: ["title": "test new", "text": "gsdklglksdgklklsdklg klsdklgklsdklg klsdlgksd"])
+        let addPostRequest = ApiRequest(resource: addPostResource)
+        
+        addPostRequest.performBodyRequest(withCompletion: completion)
+    }
+    
+    func deletePost(postId: String, withCompletion completion: @escaping () -> Void) {
+        let deletePostResource = DeletePostApiResource(postId: "5a7880616c3dcc001475ef3a")
+        let deletePostRequest = ApiRequest(resource: deletePostResource)
+        
+        deletePostRequest.performBodyRequest(withCompletion: completion)
+    }
+    
+    func login(with userName: String, password: String) {
+        let resource = LoginApiResource()
+        let loginRequest = ApiRequest(resource: resource)
+        
+        loginRequest.perform { (users) in
+            print(users?.count ?? 0)
+        }
+    }
 }
 
 extension ApiResource {
     var baseURL: String {
-        return ""
+        return "https://myblog-vyacheslav-okulov.herokuapp.com/api"
     }
 }

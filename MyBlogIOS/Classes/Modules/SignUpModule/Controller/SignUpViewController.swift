@@ -10,16 +10,50 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    fileprivate var output: SignUpOutput?
+    fileprivate var output: SignUpControllerOutput?
+    fileprivate var router: LoginRouterProtocol?
+    
+    @IBOutlet weak var userNameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    //MARK:- Actions
+    
+    @IBAction func signIn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func signUp(_ sender: Any) {
+        output?.signUp(with: userNameField.text,
+                       password: passwordField.text)
+    }
+    
 }
 
 extension SignUpViewController {
     func configureOutputAndInput() {
-        output = SignUpInteractor();
+        let interactor = SignUpInteractor()
+        output = interactor
+        
+        router = LoginRouter()
+    }
+}
+
+extension SignUpViewController: SignUpControllerInput {
+    func showErrorMessage(errorMessage: String?) {
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func signUpSucceeded() {
+        router?.showMainScreen()
     }
 }

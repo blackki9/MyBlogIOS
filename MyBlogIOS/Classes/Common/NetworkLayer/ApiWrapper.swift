@@ -14,7 +14,7 @@ struct ApiWrapper {
 
 extension ApiWrapper {
     private enum Keys: String, SerializationKey {
-        case items
+        case items = "posts"
     }
     
     init(serialization: Serialization) {
@@ -22,3 +22,4 @@ extension ApiWrapper {
     }
     
 }
+

@@ -15,25 +15,40 @@ class PostListViewController: UIViewController {
     fileprivate var output:PostListOutput? = nil
     fileprivate var dataSource: PostListDataSource? = nil
     fileprivate var tableDataSource: PostListTableDataSource?
+    fileprivate var router: PostListRouter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureOutput()
+        configureDependencies()
         configureTableView()
+        
+        self.output?.loadData()
     }
-    
 }
 
 //MARK: - extension
 
 extension PostListViewController {
-    func configureOutput() {
+    func configureDependencies() {
         let interactor = PostListInteractor();
         self.output = interactor
         self.dataSource = interactor
+        interactor.output = self
+        
+        router = PostListRouter(viewController: self)
     }
     
     func configureTableView() {
         tableDataSource = PostListTableDataSource(tableView: tableView, dataSource: dataSource)
+        tableDataSource?.didCellSelected = {[weak self] (indexPath) -> Void in
+            let post = self?.dataSource?.postAt(index: indexPath.row)
+            self?.router?.showPostDetails(post: post)
+        }
+    }
+}
+
+extension PostListViewController : PostListInput {
+    func showPosts() {
+        tableDataSource?.reloadData()
     }
 }

@@ -13,7 +13,7 @@ protocol PostListOutput {
 }
 
 protocol PostListInput {
-    
+    func showPosts()
 }
 
 protocol PostListDataSource {
@@ -22,12 +22,18 @@ protocol PostListDataSource {
 }
 
 class PostListInteractor: PostListOutput {
-    fileprivate let posts = [Post(title: "test",text: "sjsglkjgklsj klgjklsjklgjlslj"),
-                             Post(title: "test",text: "sjsglkjgklsj klgjklsjklgjlslj sf"),
-                             Post(title: "test",text: "sjsglkjgklsj klgjklsjklgjlf21421421slj")];
+    fileprivate var posts = [Post]();
+    var output: PostListInput?
     func loadData() {
         NetworkFacade.shared.loadPosts { (posts) in
-            
+            guard let posts = posts else {
+                return
+            }
+
+            self.posts = posts
+            DispatchQueue.main.async {
+                self.output?.showPosts()
+            }
         }
     }
 }

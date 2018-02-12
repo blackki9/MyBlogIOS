@@ -13,6 +13,17 @@ fileprivate let maxTextLengthForPresentation = 200
 struct Post {
     let title: String?
     let text: String?
+    let createdAt: Int?
+    let postId: String?
+    let userId: String?
+    
+    enum Keys: String, SerializationKey {
+        case title = "title"
+        case text = "text"
+        case createdAt = "createdAt"
+        case userId = "userId"
+        case postId = "postId"
+    }
     
     var textToPresent: String? {
 //        guard let text = text else {
@@ -26,13 +37,12 @@ struct Post {
 }
 
 extension Post {
-    private enum Keys: String, SerializationKey {
-        case title = "title"
-        case text = "text"
-    }
-    
+
     init(serialization: Serialization) {
         title = serialization.value(forKey: Keys.title)
         text = serialization.value(forKey: Keys.text)
+        createdAt = serialization.value(forKey: Keys.createdAt)
+        postId = serialization.value(forKey: Keys.postId)
+        userId = serialization.value(forKey: Keys.userId)
     }
 }
