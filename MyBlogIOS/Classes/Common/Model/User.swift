@@ -15,6 +15,7 @@ struct User {
     enum Keys: String, SerializationKey {
         case userName = "username"
         case userId = "userId"
+        case password = "password"
     }
 }
 

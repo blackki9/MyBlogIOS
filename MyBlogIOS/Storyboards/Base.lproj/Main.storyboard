@@ -32,7 +32,7 @@
                         <viewLayoutGuide key="safeArea" id="eGW-PD-H8B"/>
                     </view>
                     <navigationItem key="navigationItem" title="Posts" id="ZxE-aY-epk">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RBk-ki-Uzm"/>
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="RBk-ki-Uzm"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="zUc-9T-Vy7" id="oEQ-SI-BIF"/>

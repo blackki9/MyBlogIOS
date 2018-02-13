@@ -19,7 +19,7 @@ extension NetworkRequest {
         let configuration = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
         
-        let task = session.dataTask(with: request) { [weak self] (data, response, error) in
+        let task = session.dataTask(with: request) { (data, response, error) in
             guard let data = data else {
                 completion(nil)
                 return

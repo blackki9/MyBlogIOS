@@ -42,12 +42,22 @@ final class NetworkFacade {
         deletePostRequest.performBodyRequest(withCompletion: completion)
     }
     
-    func login(with userName: String, password: String) {
+    func login(with userName: String, password: String, withCompletion completion: @escaping () -> Void) {
         let resource = LoginApiResource()
         let loginRequest = ApiRequest(resource: resource)
         
         loginRequest.perform { (users) in
             print(users?.count ?? 0)
+            completion()
+        }
+    }
+    
+    func signUp(with userName: String, password: String, withCompletion completion: @escaping () -> Void) {
+        let resource = SignUpApiResource(userName: userName, password: password)
+        let loginRequest = ApiRequest(resource: resource)
+        
+        loginRequest.performBodyRequest {
+            completion()
         }
     }
 }

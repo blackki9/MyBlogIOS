@@ -21,6 +21,7 @@ class PostListViewController: UIViewController {
         super.viewDidLoad()
         configureDependencies()
         configureTableView()
+        configureRightBarButton()
         
         self.output?.loadData()
     }
@@ -44,6 +45,27 @@ extension PostListViewController {
             let post = self?.dataSource?.postAt(index: indexPath.row)
             self?.router?.showPostDetails(post: post)
         }
+    }
+    
+    func configureRightBarButton() {
+        let loggedIn = false
+        
+        self.navigationItem.rightBarButtonItem = (loggedIn) ? addPostButton() : loginButton()
+    }
+    
+    func addPostButton() -> UIBarButtonItem {
+        return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(PostListViewController.showAddPost))
+    }
+    
+    @objc func showAddPost() {
+    }
+    
+    func loginButton() -> UIBarButtonItem {
+        return UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(PostListViewController.showLogin))
+    }
+    
+    @objc func showLogin() {
+        router?.showLogin()
     }
 }
 

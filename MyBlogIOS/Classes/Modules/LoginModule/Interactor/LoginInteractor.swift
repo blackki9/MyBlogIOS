@@ -27,6 +27,10 @@ class LoginInteractor : LoginControllerOutput {
         }
         
         NetworkFacade.shared.login(with: userName,
-                                   password: password)
+                                   password: password) {
+                                    DispatchQueue.main.async {
+                                        self.output?.loginSucceded()
+                                    }
+                                   }
     }
 }

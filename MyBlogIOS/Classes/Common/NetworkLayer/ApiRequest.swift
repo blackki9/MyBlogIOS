@@ -33,7 +33,7 @@ extension ApiRequest: NetworkRequest {
 
     func performBodyRequest(withCompletion completion: @escaping () -> Void) {
         perform(resource.request) { (data) in
-//            let result = String(data: data!, encoding: .utf8)
+            let result = String(data: data!, encoding: .utf8)
             completion()
         }
     }

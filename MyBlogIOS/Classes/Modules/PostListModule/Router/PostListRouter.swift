@@ -24,4 +24,13 @@ class PostListRouter {
         postDetailsController.postToShow = post
         viewControllerToShowOn.navigationController?.pushViewController(postDetailsController, animated: true)
     }
+    
+    func showLogin() {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        guard let postDetailsController = storyboard.instantiateInitialViewController() as? LoginViewController else {
+            return
+        }
+
+        viewControllerToShowOn.navigationController?.pushViewController(postDetailsController, animated: true)
+    }
 }

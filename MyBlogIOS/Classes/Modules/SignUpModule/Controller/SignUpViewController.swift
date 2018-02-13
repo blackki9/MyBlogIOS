@@ -18,8 +18,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureOutputAndInput()
     }
     
     //MARK:- Actions
@@ -39,6 +38,7 @@ extension SignUpViewController {
     func configureOutputAndInput() {
         let interactor = SignUpInteractor()
         output = interactor
+        interactor.output = self
         
         router = LoginRouter()
     }
